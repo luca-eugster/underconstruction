@@ -43,4 +43,45 @@
     a {
       display: inline-block;
       padding: 12px 20px;
-      border-radius:
+      border-radius: 8px;
+      background: #d52b1e;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    a:hover {
+      background: #a61f16;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Grüezi 🇨🇭</h1>
+    <p>
+      D Website <strong>luca-eugster.ch</strong> isch im Momänt no im Ufbu.<br>
+      Chunt bald öppis Schöns online.
+    </p>
+
+    <a href="mailto:hallo@luca-eugster.ch">
+      hallo@luca-eugster.ch
+    </a>
+
+    <footer>
+      © <span id="year"></span> luca-eugster.ch · Made in Switzerland
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
