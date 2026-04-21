@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine erste Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(31, 78, 216, 0.8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      margin-bottom: 24px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Test 🚀</h1>
+    <p>Meine erste HTML-Seite läuft lokal in VS Code.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Über diese Seite</h2>
+      <p>Ich teste gerade meine erste Website und lerne, wie der Workflow mit ChatGPT, VS Code und GitHub funktioniert.</p>
+    </section>
+
+    <section class="card">
+      <h2>Nächster Schritt</h2>
+      <p>Als Nächstes können wir diese Seite schöner machen, Bilder einbauen und sie später auf GitHub veröffentlichen.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Meine erste Website
+  </footer>
+</body>
+</html>
