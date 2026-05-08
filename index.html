@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luca Eugster | Eidg. anerkannter Psychotherapeut</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <title>Luca Eugster | Supervision &amp; Selbsterfahrung</title>
   <meta name="description" content="Luca Eugster ist eidgenössisch anerkannter Psychotherapeut und systemischer Supervisor in Zürich. Supervision und Selbsterfahrung für psychologische und ärztliche Psychotherapeut*innen sowie Fachpersonen aus Gesundheits- und Sozialberufen." />
   <style>
     :root {
@@ -49,26 +50,17 @@
       margin: 0 auto;
     }
 
-    .topbar {
-      padding: 22px 0 10px;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-dark);
-      opacity: 0.82;
-    }
-
     .hero {
-      min-height: 86vh;
+      min-height: auto;
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
       align-items: center;
       gap: 72px;
-      padding: 24px 0 72px;
+      padding: 56px 0 56px;
     }
 
     .eyebrow {
-      margin: 0 0 18px;
+      margin: 0 0 14px;
       font-size: 14px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -100,9 +92,11 @@
     }
 
     .subtitle {
-      font-size: clamp(19px, 2.5vw, 26px);
+      max-width: 14ch;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.08;
       color: var(--accent-dark);
-      margin: 0 0 24px;
+      margin: 0 0 26px;
     }
 
     .lead {
@@ -127,7 +121,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 30px;
+      margin-top: 36px;
     }
 
     .button,
@@ -144,9 +138,9 @@
     }
 
     .button {
-      background: var(--accent-dark);
-      color: #fff;
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(72, 106, 90, 0.28);
+      color: var(--accent-dark);
+      background: rgba(251, 250, 246, 0.72);
     }
 
     .button-secondary {
@@ -158,6 +152,8 @@
     .button:hover,
     .button-secondary:hover {
       transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(72, 106, 90, 0.45);
     }
 
     .hero-image {
@@ -169,14 +165,14 @@
     }
 
     .section {
-      padding: 92px 0;
+      padding: 64px 0;
       border-top: 1px solid var(--line);
     }
 
     .section-grid {
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
-      gap: 48px;
+      gap: 40px;
       align-items: start;
     }
 
@@ -187,7 +183,7 @@
     .section-intro {
       color: var(--muted);
       font-size: 18px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .image-card img,
@@ -229,23 +225,32 @@
       margin-bottom: 8px;
     }
 
+    .focus-wrapper {
+      margin-top: 42px;
+      max-width: 100%;
+    }
     .focus-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
       gap: 0;
-      margin-top: 28px;
+      margin-top: 18px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .focus-list span {
-      display: block;
-      padding: 28px 24px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 26px 18px;
       background: transparent;
       border-right: 1px solid var(--line);
+      border-radius: 0;
       font-size: clamp(24px, 3vw, 36px);
       line-height: 1.15;
       color: var(--accent-dark);
+      text-align: center;
+      white-space: nowrap;
     }
 
     .focus-list span:last-child {
@@ -256,7 +261,7 @@
       padding: 20px 22px;
       border-left: 3px solid var(--accent);
       background: rgba(255, 255, 255, 0.55);
-      margin: 18px 0 22px;
+      margin: 22px 0 22px;
       max-width: 44ch;
     }
 
@@ -267,7 +272,7 @@
     .split {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 48px;
+      gap: 40px;
       align-items: start;
     }
 
@@ -318,19 +323,6 @@
         min-height: 320px;
       }
 
-      .focus-list {
-        grid-template-columns: 1fr;
-      }
-
-      .focus-list span {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .focus-list span:last-child {
-        border-bottom: 0;
-      }
-
       .split {
         gap: 32px;
       }
@@ -349,31 +341,41 @@
         width: min(calc(100% - 28px), var(--max-width));
       }
 
-      .topbar {
-        padding-top: 18px;
-      }
-
       .section {
-        padding: 72px 0;
+        padding: 52px 0;
       }
 
       .contact-card {
         padding: 26px;
+      }
+
+      .focus-list {
+        flex-direction: column;
+      }
+
+      .focus-list span {
+        white-space: normal;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        justify-content: flex-start;
+        padding: 18px 0;
+      }
+
+      .focus-list span:last-child {
+        border-bottom: 0;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="topbar">Supervision und Selbsterfahrung</div>
 
     <section class="hero">
       <div>
-        <p class="eyebrow">Zürich · Eidg. anerkannter Psychotherapeut · Systemischer Supervisor</p>
+        <p class="eyebrow">Eidg. anerkannter Psychotherapeut · Systemischer Supervisor</p>
         <h1>Luca Eugster</h1>
-        <p class="subtitle">Ein professioneller Rahmen für Reflexion, Entwicklung und fachlichen Austausch.</p>
+        <p class="subtitle">Supervision &amp; Selbsterfahrung</p>
         <p class="quote">„Nimm die Menschen, wie sie sind, andere gibt es nicht.“ <br />– Konrad Adenauer</p>
-        <p class="lead">Supervision und Selbsterfahrung für Psychotherapeut*innen sowie Fachpersonen aus Gesundheits- und Sozialberufen.</p>
 
         <div class="hero-links">
           <a class="button" href="#kontakt">Kontakt aufnehmen</a>
@@ -468,16 +470,6 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="page">
-      <p class="eyebrow">Spezialgebiete</p>
-      <div class="focus-list" aria-label="Spezialgebiete">
-        <span>Jugendliche</span>
-        <span>Familien</span>
-        <span>Eltern</span>
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="supervision">
     <div class="page split">
@@ -489,6 +481,14 @@
         </div>
         <p>Ich biete Supervision für psychologische und ärztliche Psychotherapeut*innen im Rahmen ihrer Weiterbildung sowie für Fachpersonen aus Gesundheits- und Sozialberufen an.</p>
         <p>Supervision kann im Einzel- oder Gruppensetting stattfinden und eignet sich auch für Kliniken und Institutionen.</p>
+        <div class="focus-wrapper">
+          <p class="eyebrow">Spezialgebiete</p>
+          <div class="focus-list" aria-label="Spezialgebiete">
+            <span>Jugendliche</span>
+            <span>Familien</span>
+            <span>Eltern</span>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -506,7 +506,7 @@
     <div class="page section-grid">
       <div>
         <p class="eyebrow">Kontakt</p>
-        <h2>Kontakt und Praxisadresse</h2>
+        <h2>Kontakt und Adresse</h2>
         <p class="section-intro">Wenn Sie eine Anfrage haben oder einen ersten Kontakt wünschen, freue ich mich über Ihre Nachricht per E-Mail.</p>
       </div>
 
@@ -520,7 +520,7 @@
   </section>
 
   <footer>
-    <div class="page">© 2026 Luca Eugster · Supervision und Selbsterfahrung in Zürich</div>
+    <div class="page">© 2026 Luca Eugster · Supervision und Selbsterfahrung</div>
   </footer>
 </body>
 </html>
