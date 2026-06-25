@@ -252,6 +252,11 @@
       min-height: 460px;
     }
 
+    .feature-image--portrait {
+      aspect-ratio: 4 / 5;
+      height: auto;
+    }
+
     .list {
       display: grid;
       gap: 18px;
@@ -280,7 +285,7 @@
     }
 
     .focus-wrapper {
-      margin-top: 42px;
+      margin-top: 0;
       max-width: 100%;
     }
     .focus-list {
@@ -348,6 +353,35 @@
 
     .contact-card address {
       font-style: normal;
+    }
+
+    .locations-intro {
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    .locations {
+      display: grid;
+      gap: 20px;
+      margin: 16px 0 22px;
+    }
+
+    .location {
+      padding-left: 18px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .location-name {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .location p {
+      margin: 0;
     }
 
     .contact-line {
@@ -490,7 +524,7 @@
       </div>
 
       <div class="image-card">
-        <img class="feature-image" src="images/luca-eugster-natur-felsen.jpg" width="1000" height="1500" loading="lazy" decoding="async" alt="Föhrenwald mit grossen Felsblöcken im Vordergrund" />
+        <img class="feature-image feature-image--portrait" src="images/luca-eugster-natur-felsen.jpg" width="1000" height="1500" loading="lazy" decoding="async" alt="Föhrenwald mit grossen Felsblöcken im Vordergrund" />
       </div>
     </div>
   </section>
@@ -531,7 +565,7 @@
   <section class="section">
     <div class="page section-grid">
       <div class="image-card">
-        <img class="feature-image" src="images/luca-eugster-waldweg.jpg" width="640" height="574" loading="lazy" decoding="async" alt="Person auf einem Waldweg zwischen kahlen Bäumen im Winter" />
+        <img class="feature-image" src="images/luca-eugster-waldweg.jpg" width="640" height="800" loading="lazy" decoding="async" alt="Person auf einem Waldweg zwischen kahlen Bäumen im Winter" />
       </div>
 
       <div>
@@ -573,14 +607,6 @@
         </div>
         <p>Ich biete Supervision für psychologische und ärztliche Psychotherapeut*innen im Rahmen ihrer Weiterbildung sowie für Fachpersonen aus Gesundheits- und Sozialberufen an.</p>
         <p>Supervision kann im Einzel- oder Gruppensetting stattfinden und eignet sich auch für Kliniken und Institutionen.</p>
-        <div class="focus-wrapper">
-          <p class="eyebrow">Spezialgebiete</p>
-          <div class="focus-list" aria-label="Spezialgebiete">
-            <span>Jugendliche</span>
-            <span>Familien</span>
-            <span>Eltern</span>
-          </div>
-        </div>
       </div>
 
       <div>
@@ -591,14 +617,23 @@
         </div>
         <p>Selbsterfahrung richtet sich an psychologische und ärztliche Psychotherapeut*innen im Rahmen ihrer Weiterbildung.</p>
       </div>
+
+      <div class="focus-wrapper">
+        <p class="eyebrow">Spezialgebiete</p>
+        <div class="focus-list" aria-label="Spezialgebiete">
+          <span>Jugendliche</span>
+          <span>Familien</span>
+          <span>Eltern</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section" id="kontakt">
     <div class="page section-grid">
       <div>
-        <p class="eyebrow">Kontakt</p>
-        <h2>Kontakt und Adresse</h2>
+        <p class="eyebrow">Kontakt &amp; Praxisräumlichkeiten</p>
+        <h2>Zürich und Thalwil</h2>
         <p class="section-intro">Wenn Sie eine Anfrage haben oder einen ersten Kontakt wünschen, freue ich mich über Ihre Nachricht per E-Mail.</p>
       </div>
 
@@ -606,7 +641,20 @@
         <address>
           <p><strong>Luca Eugster</strong></p>
           <p class="contact-line">Eidg. anerkannter Psychotherapeut<br />Systemischer Supervisor</p>
-          <p class="contact-line">Universitätstrasse 65<br />8006 Zürich</p>
+
+          <p class="locations-intro">Sitzungen finden an zwei Standorten statt:</p>
+
+          <div class="locations">
+            <div class="location">
+              <span class="location-name">Zürich</span>
+              <p class="contact-line">Universitätstrasse 65<br />8006 Zürich</p>
+            </div>
+            <div class="location">
+              <span class="location-name">Thalwil</span>
+              <p class="contact-line">Nähe Bahnhof Thalwil</p>
+            </div>
+          </div>
+
           <p class="contact-line"><a href="mailto:hallo@luca-eugster.ch">hallo@luca-eugster.ch</a></p>
         </address>
       </div>
@@ -616,8 +664,7 @@
   <section class="section" id="impressum">
     <div class="page section-grid">
       <div>
-        <p class="eyebrow">Rechtliches</p>
-        <h2>Impressum</h2>
+        <h2 class="eyebrow">Impressum</h2>
       </div>
 
       <div class="legal">
@@ -643,8 +690,7 @@
   <section class="section" id="datenschutz">
     <div class="page section-grid">
       <div>
-        <p class="eyebrow">Rechtliches</p>
-        <h2>Datenschutzerklärung</h2>
+        <h2 class="eyebrow">Datenschutzerklärung</h2>
       </div>
 
       <div class="legal">
