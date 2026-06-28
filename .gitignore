@@ -1,1 +1,4 @@
 .DS_Store
+
+# Unprocessed source photos — kept locally only, never published
+_originals/
